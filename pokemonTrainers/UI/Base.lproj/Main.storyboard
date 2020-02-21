@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RegisterViewController" customModule="pokemonTrainers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trainer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OEM-Zi-kK4">
+                                <rect key="frame" x="60" y="82" width="255" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Pokémon" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-dF-4U1">
+                                <rect key="frame" x="60" y="140" width="255" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfC-p5-oNQ">
+                                <rect key="frame" x="147" y="188" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.2591978915" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerTrainer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVj-Y7-jvS"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QOB-Q6-8kk">
+                                <rect key="frame" x="0.0" y="233" width="375" height="545"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="cEu-bX-yvY" customClass="TrainersTableViewCell" customModule="pokemonTrainers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cEu-bX-yvY" id="A80-Pt-eAA" customClass="TrainersTableViewCell" customModule="pokemonTrainers" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0e6-m6-Cf4">
+                                                    <rect key="frame" x="246" y="12" width="114" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quD-Dp-hTg">
+                                                    <rect key="frame" x="15" y="11" width="223" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pokemonTypeLabel" destination="0e6-m6-Cf4" id="9E9-3a-mEI"/>
+                                            <outlet property="trainerNameLabel" destination="quD-Dp-hTg" id="Ovl-R8-kh7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trainer Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiW-VX-rUX">
+                                <rect key="frame" x="129" y="47" width="126" height="23.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kbp-dF-4U1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="0mY-1g-XXG"/>
+                            <constraint firstItem="Kbp-dF-4U1" firstAttribute="top" secondItem="OEM-Zi-kK4" secondAttribute="bottom" constant="24" id="2R5-eu-ifz"/>
+                            <constraint firstItem="kfC-p5-oNQ" firstAttribute="top" secondItem="Kbp-dF-4U1" secondAttribute="bottom" constant="14" id="C4x-K0-lhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OEM-Zi-kK4" secondAttribute="trailing" constant="60" id="Cqp-pn-s9W"/>
+                            <constraint firstAttribute="trailing" secondItem="BiW-VX-rUX" secondAttribute="trailing" constant="120" id="FzC-TD-2J3"/>
+                            <constraint firstItem="OEM-Zi-kK4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="HC0-Ay-Pch"/>
+                            <constraint firstItem="BiW-VX-rUX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="47" id="Kqg-je-Rc0"/>
+                            <constraint firstItem="QOB-Q6-8kk" firstAttribute="top" secondItem="kfC-p5-oNQ" secondAttribute="bottom" constant="15" id="Mff-kS-U4n"/>
+                            <constraint firstItem="OEM-Zi-kK4" firstAttribute="top" secondItem="BiW-VX-rUX" secondAttribute="bottom" constant="11.33" id="QL2-7L-AbR"/>
+                            <constraint firstItem="QOB-Q6-8kk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ah2-3V-HBX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kfC-p5-oNQ" secondAttribute="trailing" constant="148" id="boS-YX-Nuf"/>
+                            <constraint firstItem="BiW-VX-rUX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" symbolic="YES" id="cAG-pU-0no"/>
+                            <constraint firstItem="QOB-Q6-8kk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fOR-rJ-7zO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QOB-Q6-8kk" secondAttribute="bottom" id="iEc-Qn-gLg"/>
+                            <constraint firstItem="kfC-p5-oNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="quS-gf-ndi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kbp-dF-4U1" secondAttribute="trailing" constant="60" id="wuX-wk-WKE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="favoritePokemonTextField" destination="Kbp-dF-4U1" id="Orq-gE-Zfy"/>
+                        <outlet property="registerButton" destination="kfC-p5-oNQ" id="GqR-KG-nYO"/>
+                        <outlet property="tableView" destination="QOB-Q6-8kk" id="wfp-UQ-4pq"/>
+                        <outlet property="trainerNameTextField" destination="OEM-Zi-kK4" id="y5w-Ip-1cR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="107.14285714285715"/>
+        </scene>
+    </scenes>
+</document>
